@@ -1,17 +1,17 @@
-import "./App.css"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import LinkedInIcon from "@mui/icons-material/LinkedIn"
-import PhoneIcon from "@mui/icons-material/Phone"
-import EmailIcon from "@mui/icons-material/Email"
-import HomeIcon from "@mui/icons-material/Home"
-import Home from "@mui/icons-material/Home"
-import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople"
-import AttachFileIcon from "@mui/icons-material/AttachFile"
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
-import AboutMe from "./components/AboutMe"
-import Resume from "./components/Resume"
-import Projects from "./components/Projects"
+import "./App.css";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import HomeIcon from "@mui/icons-material/Home";
+import Home from "@mui/icons-material/Home";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AboutMe from "./components/AboutMe";
+import Resume from "./components/Resume";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -82,14 +82,22 @@ function App() {
             </Route>
             <Route exact path="/">
               <div>
-                <h1>Hello, My name is Jose ":)"</h1>
+                <h1 className="title-card">Hello, My name is Jose ":)"</h1>
+              </div>
+              <div>
+                <h3 className="subtitle">
+                  Here's a little{" "}
+                  <a className="aboutMe-link" href="./AboutMe">
+                    about me
+                  </a>
+                </h3>
               </div>
             </Route>
           </Switch>
         </div>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

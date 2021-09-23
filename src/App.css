@@ -95,3 +95,63 @@ a {
   text-decoration: none;
   color: rgb(72, 70, 74);
 }
+.aboutMe-link {
+  color: black;
+  text-decoration: underline 3px rgb(138, 226, 236);
+}
+
+.title-card {
+  position: relative;
+  font-family: monospace;
+}
+
+.title-card::before,
+.title-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.title-card::before {
+  background-color: whitesmoke;
+  animation: typewriter 4s steps(27) 1s forwards;
+}
+
+.title-card::after {
+  width: 0.125em;
+  background-color: black;
+  animation: typewriter 4s steps(27) 1s forwards, blink 750ms steps(27) infinite;
+}
+
+.subtitle {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc((750ms) + 4.5s) forwards;
+}
+
+.headshot {
+  background-image: url("images/IMG_0132.jpg");
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: -0rem -0rem;
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
